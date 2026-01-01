@@ -10,12 +10,6 @@ body {
 /* ==============================
    PAGE LAYOUT
 ================================ */
-.ourteam-page {
-  background: var(--bg);
-  color: var(--fg);
-  padding-bottom: 120px;
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -52,22 +46,13 @@ body {
 /* ==============================
    TEAM SECTION
 ================================ */
-.ourteam-section {
-  padding-top: 40px;
-}
 
-.ourteam-section-title {
-  text-align: center;
-  font-size: clamp(28px, 4vw, 48px);
-  font-weight: 800;
-  margin-bottom: 64px;
-}
 
 .ourteam-note {
   margin-top: 48px;
   text-align: center;
   font-size: 14px;
-  color: rgba(247, 248, 250, 0.55);
+  color: #848484;
 }
 
 /* ==============================

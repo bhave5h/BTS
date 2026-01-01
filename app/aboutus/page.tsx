@@ -6,21 +6,16 @@ export default function Ourteam() {
   return (
     <main className="ourteam-page">
 
-
       {/* Hero */}
       <section className="ourteam-hero container">
-        <h1 className="ourteam-title">OUR TEAM</h1>
-        <p className="ourteam-subtitle">
-          We’re a crew of creators, strategists, editors, and growth marketers
-          who live and breathe social media. From viral content to performance
-          campaigns, we turn attention into engagement—and engagement into
-          growth.
+        <h1 className="mb-2 text-4xl font-bold text-white heading"> OUR <span className="text-[#40BBFF]">TEAM</span> </h1>
+        <p className="mt-2 max-w-3xl mx-auto text-2xl text-[#848484]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quas voluptas unde consequatur dolorum corporis, sunt beatae sint quae distinctio!
         </p>
       </section>
 
       {/* Team */}
       <section className="ourteam-section container">
-        <h2 className="ourteam-section-title">Leadership & Team</h2>
 
         <div className="people-grid">
           <PersonCard
@@ -45,9 +40,6 @@ export default function Ourteam() {
           />
         </div>
 
-        <p className="ourteam-note">
-          More team members will be added here — these are sample placeholders.
-        </p>
         
       </section>
     </main>

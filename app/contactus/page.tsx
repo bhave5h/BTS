@@ -6,6 +6,7 @@ import styles from "./contact.module.css";
 interface FormData {
   name: string;
   email: string;
+  contactnumber: string;
   company?: string;
   interest: string;
   message: string;
@@ -21,6 +22,7 @@ export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
+    contactnumber: "",
     company: "",
     interest: "",
     message: "",
@@ -65,6 +67,7 @@ export default function ContactForm() {
       setFormData({
         name: "",
         email: "",
+        contactnumber: "",
         company: "",
         interest: "",
         message: "",
@@ -84,7 +87,7 @@ export default function ContactForm() {
             <div className="hero-box">
               <video
                 className="video-element"
-                src="/videos/2.mp4"
+                src="/videos/1.mp4"
                 autoPlay
                 muted
                 loop
@@ -107,6 +110,18 @@ export default function ContactForm() {
                 placeholder="your name"
               />
               <input
+                name="company"
+                value={formData.company}
+                onChange={handleInputChange}
+                placeholder="company"
+                />
+              <input
+               name="contactnumber"
+               value={formData.contactnumber}
+               onChange={handleInputChange}
+               placeholder="phone number"
+              />
+              <input
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
@@ -117,21 +132,40 @@ export default function ContactForm() {
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
-                placeholder="your message"
+                placeholder="Enter your niche and requirements"
               />
-              <select
-                className={styles.contactSelect}
-                name="interest"
-                value={formData.interest}
-                onChange={handleInputChange}
-              >
-                <option value="">Select a service</option>
-                <option value="strategy">Social Strategy</option>
-                <option value="content">Content Creation</option>
-                <option value="advertising">Paid Advertising</option>
-                <option value="full">Full Management</option>
-                <option value="other">Other</option>
-              </select>
+<select
+  className={styles.contactSelect}
+  name="interest"
+  value={formData.interest}
+  onChange={handleInputChange}
+  required
+>
+  <option value="" disabled hidden>
+    Select an option
+  </option>
+
+  <option value="social_media_marketing">
+    Social Media Marketing
+  </option>
+
+  <option value="performance_marketing">
+    Performance Marketing
+  </option>
+
+  <option value="seo">
+    Search Engine Optimization (SEO)
+  </option>
+
+  <option value="influencer_marketing">
+    Influencer Marketing
+  </option>
+
+  <option value="photography">
+    Photography
+  </option>
+</select>
+
               <button className="contact-submit" disabled={isSubmitting}>
                 {isSubmitting ? "sending..." : "submit"}
               </button>

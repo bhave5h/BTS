@@ -109,7 +109,7 @@ export default function ReelStudio({
 
         <div className="flex flex-col items-center text-center">
     
-    <h1 className="mb-6 text-4xl font-bold text-white">
+    <h1 className="mb-6 text-4xl font-bold text-white heading">
       WORKS
     </h1>
 
@@ -147,7 +147,8 @@ export default function ReelStudio({
 
       {/* LOGOS */}
       <section className={styles.logos}>
-        <h3>Trusted by leading brands</h3>
+         <h1 className="mb-20 text-4xl font-bold text-white heading"> OUR <span className="text-[#40BBFF]">CLIENTS</span> </h1>
+
         <div className={styles.logoGrid}>
           {logos.map((logo, index) => (
             <div key={index} className={styles.logoBox}>
