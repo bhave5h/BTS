@@ -58,7 +58,7 @@ export async function POST(request: Request) {
       from: EMAIL_USER,
       to: ADMIN_EMAIL,
       subject: `New Contact Form Submission from ${name}`,
-      html:`
+      html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
