@@ -1,141 +1,105 @@
 "use client";
 
-import "./footer.css";
-
 export default function Footer() {
   return (
-    <footer className="site-footer footer-new">
-      <div className="footer-inner container">
-        {/* LEFT */}
-        <div className="footer-left">
-          <div className="phone-art rounded">
-            <video
-              className="footer-reel"
-              src="/videos/1.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              aria-label="Footer reel video"
-              title="Reel"
-            />
+    <footer className="relative bg-[#ffffff] text-black">
+      {/* ================= MAIN ================= */}
+      <div className="mx-auto max-w-[1100px] px-4 sm:px-6 py-16 md:py-20">
+        <div className="grid gap-14 lg:grid-cols-[1.4fr_1fr_0.6fr]">
+          
+          {/* ================= LEFT ================= */}
+          <div className="flex flex-col gap-6">
+
+            
+          {/* logo */}
+          <div className="flex justify-center sm:justify-start">
+            <img src="/icons/brandlogo.png" alt="brand logo"/>
           </div>
 
-          <div className="footer-copy">
-            <p className="footer-lead">
-              We help brands grow by making remarkable, scroll-stopping creative.
-            </p>
-            <p className="footer-sub">
-              Subscribe for monthly case studies, tips and a peek behind our reels.
+          {/* COPY */}
+          <div className="max-w-md text-center sm:text-left">
+            <p className="text-lg md:text-xl font-semibold leading-snug">
+              We help brands grow through thoughtful, scroll-stopping creative.
             </p>
 
-            <form
-              className="footer-newsletter"
-              action="/api/newsletter"
-              method="post"
-            >
-              <label className="sr-only" htmlFor="newsletter-email">
-                Email
-              </label>
-              <div className="newsletter-row">
-                <input
-                  id="newsletter-email"
-                  name="email"
-                  type="email"
-                  placeholder="you@company.com"
-                  aria-label="Email"
-                />
-                <button className="btn-primary" type="submit">
-                  Subscribe
-                </button>
-              </div>
-            </form>
+            <p className="mt-3 text-sm md:text-base text-black/70">
+              Monthly insights, case studies, and behind-the-scenes thinking.
+            </p>
           </div>
         </div>
 
-        {/* MIDDLE */}
-        <div className="footer-mid">
-          <div className="site-links">
-            <h4>Explore</h4>
-            <a href="/aboutus">About</a>
-            <a href="/services">Services</a>
-            <a href="/ourteam">Team</a>
-            <a href="/clients">Clients</a>
+
+          {/* ================= MIDDLE ================= */}
+          <div className="grid grid-cols-2 gap-10 text-center sm:text-left">
+            <div>
+              <h4 className="mb-4 text-sm font-extrabold uppercase tracking-widest">
+                Explore
+              </h4>
+              <ul className="space-y-2 text-sm font-medium">
+                <li><a href="/aboutus" className="hover:underline">About</a></li>
+                <li><a href="/services" className="hover:underline">Services</a></li>
+                <li><a href="/ourteam" className="hover:underline">Team</a></li>
+                <li><a href="/clients" className="hover:underline">Clients</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="mb-4 text-sm font-extrabold uppercase tracking-widest">
+                Work
+              </h4>
+              <ul className="space-y-2 text-sm font-medium">
+                <li><a href="/works" className="hover:underline">Case Studies</a></li>
+                <li><a href="/works#featured" className="hover:underline">Featured</a></li>
+                <li><a href="/contactus" className="hover:underline">Contact</a></li>
+                <li><a href="/privacy" className="hover:underline">Privacy</a></li>
+              </ul>
+            </div>
           </div>
 
-          <div className="work-links">
-            <h4>Work</h4>
-            <a href="/works">Case Studies</a>
-            <a href="/works#featured">Featured</a>
-            <a href="/contactus">Contact</a>
-            <a href="/privacy">Privacy</a>
+          {/* ================= RIGHT ================= */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="flex gap-4 lg:flex-col">
+              {["i", "x", "l"].map((icon) => (
+                <a
+                  key={icon}
+                  href="#"
+                  className="
+                    flex h-11 w-11 items-center justify-center
+                    rounded-xl
+                    bg-white
+                    transition
+                    hover:scale-105
+                    shadow-md
+                  "
+                >
+                  <img
+                    src={`/icons/${icon}.png`}
+                    alt="social"
+                    className="h-4 w-4"
+                  />
+                </a>
+              ))}
+            </div>
           </div>
+
         </div>
-
-        {/* RIGHT */}
-        <aside className="footer-right">
-          <div className="social-vertical" aria-hidden="true">
-            <a
-              href="https://www.instagram.com/bigtopsocial/"
-              className="social"
-              aria-label="Instagram"
-            >
-              <img
-                src="/icons/i.png"
-                alt="Instagram logo"
-                className="social-logo"
-              />
-            </a>
-
-            <a href="#" className="social" aria-label="X">
-              <img
-                src="/icons/x.png"
-                alt="X logo"
-                className="social-logo"
-              />
-            </a>
-
-            <a href="#" className="social" aria-label="LinkedIn">
-              <img
-                src="/icons/l.png"
-                alt="LinkedIn logo"
-                className="social-logo"
-              />
-            </a>
-          </div>
-        </aside>
       </div>
 
-      {/* BOTTOM */}
-      <div className="footer-bottom container">
-        <div className="copyright">
-          © {new Date().getFullYear()} BigTop Social — Nagpur
+      {/* ================= BOTTOM ================= */}
+      <div className="border-t border-black/20">
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 py-6">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-black/80">
+            <span className="text-center">
+              © {new Date().getFullYear()} BigTop Social — Nagpur
+            </span>
+
+            <nav className="flex gap-6">
+              <a href="/terms" className="hover:underline">Terms</a>
+              <a href="/privacy" className="hover:underline">Privacy</a>
+            </nav>
+          </div>
         </div>
-
-        <nav className="footer-small">
-          <a href="/terms">Terms</a>
-          <a href="/privacy">Privacy</a>
-        </nav>
       </div>
-
-      {/* BACK TO TOP */}
-      <a href="#top" className="back-to-top" aria-label="Back to top">
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
-          fill="none"
-        >
-          <circle cx="12" cy="12" r="11" stroke="currentColor" strokeWidth="1.2" />
-          <path
-            d="M12 16V8M12 8l-3 3M12 8l3 3"
-            stroke="currentColor"
-            strokeWidth="1.4"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </a>
     </footer>
   );
 }

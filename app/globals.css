@@ -26,3 +26,27 @@ body {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
 }
+
+
+
+/* ================================
+   REEL SLIDER ANIMATION
+================================ */
+@keyframes reel-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-reel {
+  animation: reel-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+/* Pause reel on hover */
+.reel-track:has(.reel-card:hover) {
+  animation-play-state: paused;
+}

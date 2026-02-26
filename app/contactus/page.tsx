@@ -80,14 +80,14 @@ export default function ContactForm() {
   const messageRef = useRef<HTMLTextAreaElement | null>(null);
 
   return (
-    <section className="py-20 px-6">
+    <section className="py-20 px-6 ">
       <div className="max-w-6xl mx-auto">
         <div className="contact-grid">
           <div>
             <div className="hero-box">
               <video
                 className="video-element"
-                src="/videos/INTRO.mp4"
+                src="/videos/contact.mp4"
                 autoPlay
                 muted
                 loop

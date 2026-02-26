@@ -6,10 +6,10 @@
   top: 16px;
   left: 16px;
   z-index: 120;
+
   width: 52px;
   height: 52px;
-
-  border-radius: 50%; /* ⬅ PERFECT CIRCLE */
+  border-radius: 50%;
 
   background: #41414148;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -20,7 +20,6 @@
 
   cursor: pointer;
 
- 
   transition:
     background 0.2s ease,
     border 0.2s ease,
@@ -28,7 +27,7 @@
 }
 
 .menu-toggle:hover {
-   background: #41414196;
+  background: #41414196;
   border-color: rgba(255, 255, 255, 0.2);
   transform: scale(1.05);
 }
@@ -37,7 +36,6 @@
   transform: scale(0.95);
 }
 
-/* ICON SIZE */
 .menu-toggle svg {
   width: 22px;
   height: 22px;
@@ -45,23 +43,15 @@
   stroke-width: 1.8;
   fill: none;
 }
-.heading-h3{
-  color: #000000;
-  justify-self:center;
-  font-size:2rem;
 
-}
-.heading-highlight {
-  color: #40bbff; 
-}
 
 /* ===============================
-   OVERLAY (CLICK TO CLOSE)
+   OVERLAY
 ================================ */
 .sidebar-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.397);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 90;
 }
 
@@ -77,13 +67,13 @@
   width: 300px;
   height: 100vh;
 
-  background:white;
-  color: #e5e7eb;
+  background: #ffffff;
+  color: #000000;
 
   display: flex;
   flex-direction: column;
 
-  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
   z-index: 100;
 
   transform: translateX(-100%);
@@ -102,113 +92,48 @@
   height: 64px;
   padding: 0 20px;
 
- 
   display: flex;
   align-items: center;
-  
-  gap: 10px;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.logo {
-    color: #000000;
+.heading-h3 {
+  font-size: 2rem;
   font-weight: 900;
-  font-size: 15px;
-  letter-spacing: 0.05em;
-  
+  color: #000000;
+}
+
+.heading-highlight {
+  color: #40bbff;
 }
 
 
+/* ===============================
+   SIMPLE NAV LINKS
+================================ */
 .sidebar-nav {
   flex: 1;
-  overflow-y: auto;
-  padding: 16px 8px 40px;
-}
-
-/* Scrollbar (Material UI style) */
-.sidebar-nav::-webkit-scrollbar {
-  width: 8px;
-}
-
-.sidebar-nav::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 999px;
-}
-
-.sidebar-nav::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-
-/* ===============================
-   SECTIONS
-================================ */
-.sidebar-section {
-  margin-bottom: 10px;
-}
-
-.section-title {
-  width: 100%;
-  background: none;
-  border: none;
-
-  padding: 10px 14px;
+  padding: 24px 20px;
 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-
-  color: #e5e7eb;
-  cursor: pointer;
+  flex-direction: column;
+  gap: 18px;
 }
 
-.section-title:hover {
-  background: rgba(255, 255, 255, 0.04);
-}
-
-/* Arrow */
-.arrow {
-  font-size: 14px;
-  transition: transform 0.25s ease;
-}
-
-.arrow.open {
-  transform: rotate(90deg);
-}
-
-
-/* ===============================
-   LINKS
-================================ */
-.section-links {
-  padding-left: 6px;
-}
-
-.section-links a {
-  display: block;
-
-  padding: 8px 14px;
-  margin: 2px 0;
-
-  font-size: 14px;
-  font-weight: 500;
+.sidebar-nav a {
+  font-size: 1.1rem;
+  font-weight: 600;
 
   color: #000000;
   text-decoration: none;
 
-  border-radius: 6px;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.section-links a:hover {
-  background: rgba(255, 255, 255, 0.06);
-  color: #40bbff;
+.sidebar-nav a:hover {
+  opacity: 0.7;
+  transform: translateX(4px);
 }
 
 
@@ -216,22 +141,19 @@
    CONTENT OFFSET (DESKTOP)
 ================================ */
 .main-content {
-  margin-left: 280px;
-}
-.section-title {
-  color: #000000; /* black */
+  margin-left: 300px;
 }
 
 
 /* ===============================
-   MOBILE BEHAVIOR
+   MOBILE
 ================================ */
 @media (max-width: 768px) {
-  .main-content {
-    margin-left: 0;
-  }
-
   .sidebar {
     width: 260px;
+  }
+
+  .main-content {
+    margin-left: 0;
   }
 }

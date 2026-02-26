@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 
 interface ImageSource {
   src: string;
@@ -62,14 +61,14 @@ function RevealImageListItem({
             opacity: active ? 1 : 0,
           }}
           className="
-            absolute w-24 h-24 object-cover rounded-md
+            absolute w-28 h-28 object-cover rounded-md
             shadow-xl
             transition-all duration-300 ease-out
           "
         />
 
         {/* Image 2 */}
-        <img
+        {/* <img
           src={images[1].src}
           alt={images[1].alt}
           style={{
@@ -81,7 +80,7 @@ function RevealImageListItem({
             shadow-xl
             transition-all duration-400 ease-out
           "
-        />
+        /> */}
       </div>
     </div>
   );
@@ -98,13 +97,14 @@ function Service() {
         "Build brand awareness and audience engagement through high-impact content and strategic campaigns.",
       images: [
         {
-          src: "https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?w=300&auto=format&fit=crop&q=60",
+          src: "/services/1.png",
           alt: "Social media",
         },
         {
-          src: "https://images.unsplash.com/photo-1567262439850-1d4dc1fefdd0?w=300&auto=format&fit=crop&q=60",
+          src: "/services/1.png",
           alt: "Marketing",
         },
+        
       ],
     },
     {
@@ -113,11 +113,11 @@ function Service() {
         "Data-driven ad campaigns focused on ROI, conversions, and measurable growth.",
       images: [
         {
-          src: "https://images.unsplash.com/photo-1587440871875-191322ee64b0?w=300&auto=format&fit=crop&q=60",
+          src: "/services/2.png",
           alt: "Ads",
         },
         {
-          src: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=300&auto=format&fit=crop&q=60",
+          src: ".",
           alt: "Analytics",
         },
       ],
@@ -128,7 +128,7 @@ function Service() {
         "High-performance websites built with modern technologies and clean UI systems.",
       images: [
         {
-          src: "https://images.unsplash.com/photo-1587440871875-191322ee64b0?w=300&auto=format&fit=crop&q=60",
+          src: "/services/3.png",
           alt: "Development",
         },
         {
@@ -143,11 +143,11 @@ function Service() {
         "SEO to improve visibility, rankings, and organic traffic.",
       images: [
         {
-          src: "https://images.unsplash.com/photo-1587440871875-191322ee64b0?w=300&auto=format&fit=crop&q=60",
+          src: "/services/4.png",
           alt: "SEO",
         },
         {
-          src: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=300&auto=format&fit=crop&q=60",
+          src: ".",
           alt: "Search",
         },
       ],
@@ -158,11 +158,11 @@ function Service() {
         "Collaborations with creators to build trust and amplify brand reach.",
       images: [
         {
-          src: "https://images.unsplash.com/photo-1587440871875-191322ee64b0?w=300&auto=format&fit=crop&q=60",
+          src: "/services/5.png",
           alt: "Influencers",
         },
         {
-          src: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=300&auto=format&fit=crop&q=60",
+          src: ".",
           alt: "Creators",
         },
       ],
@@ -173,11 +173,11 @@ function Service() {
         "Crafting strong visual identities that connect emotionally with your audience.",
       images: [
         {
-          src: "https://images.unsplash.com/photo-1575995872537-3793d29d972c?w=300&auto=format&fit=crop&q=60",
+          src: "/services/6.png",
           alt: "Brand",
         },
         {
-          src: "https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?w=300&auto=format&fit=crop&q=60",
+          src: ".",
           alt: "Identity",
         },
       ],

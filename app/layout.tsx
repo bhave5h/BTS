@@ -3,6 +3,7 @@ import Navbar from "../components/sidenavbar";
 import Footer from "../components/Footer";
 
 
+
 export const metadata = {
   title: "Bigtop Social",
   description: "A simple starting layout for the app",

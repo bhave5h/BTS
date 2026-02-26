@@ -1,12 +1,10 @@
-import { AnimatedTestimonials } from "./testimonials/animated-testimonials";
-import { TESTIMONIALS } from "./testimonials/testimonials.data";
-
+import { AnimatedTestimonials } from "./aboutus/animated-testimonials";
+import { TESTIMONIALS } from "./aboutus/testimonials.data";
 import { Service } from "./services/Serviceshover";
-import Video from "./works/videos";
-import Ourteam from "./aboutus/page";
+import Ourteam from "./team/page";
 import ContactForm from "./contactus/page";
-import Stats from "./testimonials/stats";
-import dynamic from "next/dynamic";
+import Stats from "./aboutus/stats";
+import ReelandVideo from "./works/reels";
 
 export default function HomePage() {
   return (
@@ -16,7 +14,7 @@ export default function HomePage() {
         {/* BACKGROUND VIDEO */}
         <video
           className="absolute inset-0 h-full w-full object-cover"
-          src="/bg.mp4"
+          src="/videos/bg.mp4"
           autoPlay
           loop
           muted
@@ -31,7 +29,7 @@ export default function HomePage() {
 
       {/* WORKS SECTION */}
       <section>
-        <Video />
+        <ReelandVideo />
       </section>
 
       {/* TEAM SECTION */}
